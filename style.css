@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Arial, sans-serif;
+  background-color: #fff7ed;
+  color: #1f2933;
+}
+
+header {
+  height: 70px;
+  padding: 0 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  height: 42px;
+}
+
+.logo img {
+  height: 100%;
+  width: auto;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1f2933;
+  font-weight: 500;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background-color: #ea580c;
+  transition: 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+main {
+  height: calc(100vh - 70px);
+  display: flex;
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 4rem;
+}
+
+.content {
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.tagline {
+  color: #ea580c;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.content h1 {
+  font-size: 3rem;
+  line-height: 1.15;
+}
+
+.content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+.btn {
+  margin-top: 1rem;
+  width: fit-content;
+  padding: 0.7rem 1.8rem;
+  background-color: #111827;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #9a3412;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right img {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+}
+
+
+@media (max-width: 1024px) {
+  header {
+    padding: 0 3rem;
+  }
+
+  .content h1 {
+    font-size: 2.5rem;
+  }
+
+  .right img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0 2rem;
+  }
+
+  main {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left {
+    padding: 3rem 2rem;
+  }
+
+  .right img {
+    width: 70%;
+    height: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  header {
+    padding: 0 1.2rem;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .left {
+    padding: 2rem 1.5rem;
+  }
+
+  .right img {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1536px) {
+  .content h1 {
+    font-size: 3.5rem;
+  }
+
+  .right img {
+    width: 70%;
+  }
+}

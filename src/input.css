@@ -2,13 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom Styles & Utilities */
 body {
-  background-color: #fffbf2; /* Very soft cream */
+  background-color: #fffbf2;
   color: #1c1917;
 }
 
-/* Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -23,9 +21,6 @@ body {
   background: #c2410c;
 }
 
-/* Glassmorphism */
-/* Note: Tailwind handles most of this, but keeping custom class for specific effect if needed. 
-   Ideally, these should be @layer components but keeping as is for now to minimize breakage. */
 .glass {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
@@ -47,7 +42,6 @@ body {
   background: rgba(255, 255, 255, 0.95);
 }
 
-/* Text Gradients */
 .text-gradient {
   background-clip: text;
   -webkit-background-clip: text;
@@ -55,7 +49,6 @@ body {
   background-image: linear-gradient(to right, #ea580c, #ca8a04);
 }
 
-/* Scroll Animation Classes */
 .reveal-on-scroll {
   opacity: 0;
   transform: translateY(30px);
@@ -67,7 +60,6 @@ body {
   transform: translateY(0);
 }
 
-/* Blob Background */
 .blob-bg {
   position: absolute;
   width: 150%;

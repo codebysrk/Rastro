@@ -1,4 +1,3 @@
-// 1. Mobile Menu Logic
 const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
 const navLinks = document.querySelectorAll("#mobileMenu a");
@@ -12,7 +11,6 @@ function toggleMenu() {
     mobileMenu.classList.remove("opacity-0", "pointer-events-none");
     mobileMenu.classList.add("opacity-100", "pointer-events-auto");
 
-    // Animate hamburger
     spans[0].classList.add("rotate-45", "translate-y-2");
     spans[1].classList.add("opacity-0");
     spans[2].classList.add("-rotate-45", "-translate-y-2");
@@ -20,7 +18,6 @@ function toggleMenu() {
     mobileMenu.classList.add("opacity-0", "pointer-events-none");
     mobileMenu.classList.remove("opacity-100", "pointer-events-auto");
 
-    // Reset hamburger
     spans[0].classList.remove("rotate-45", "translate-y-2");
     spans[1].classList.remove("opacity-0");
     spans[2].classList.remove("-rotate-45", "-translate-y-2");
@@ -30,7 +27,6 @@ function toggleMenu() {
 hamburger.addEventListener("click", toggleMenu);
 navLinks.forEach((link) => link.addEventListener("click", toggleMenu));
 
-// 2. Scroll Animation (Intersection Observer)
 const observerOptions = {
   threshold: 0.1,
   rootMargin: "0px 0px -50px 0px",
@@ -40,7 +36,7 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("visible");
-      observer.unobserve(entry.target); // Only animate once
+      observer.unobserve(entry.target);
     }
   });
 }, observerOptions);
@@ -49,7 +45,6 @@ document.querySelectorAll(".reveal-on-scroll").forEach((el) => {
   observer.observe(el);
 });
 
-// 3. Navbar Blur Effect on Scroll
 const header = document.getElementById("main-header");
 window.addEventListener("scroll", () => {
   if (window.scrollY > 20) {

@@ -20,5 +20,8 @@
   "homepage": "https://github.com/codebysrk/Rastro#readme",
   "devDependencies": {
     "tailwindcss": "^3.4.19"
+  },
+  "dependencies": {
+    "jimp": "^1.6.0"
   }
 }
